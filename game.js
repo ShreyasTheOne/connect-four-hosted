@@ -8,6 +8,19 @@ var map = [['ta','tb','tc','td','te','tf','tg'],['ba','bb','bc','bd','be','bf','
 var maxDepth = [ 6 , 6 , 6 , 6 , 6 , 6 , 6 ];
 var shadowMap = [ ['ra','rb','rc','rd','re','rf','rg'] , ['ya','yb','yc','yd','ye','yf','yg'] ];
 
+
+$("document").ready(function(){
+    
+    $("#instr").on('click', function(){
+        document.getElementById("instructions").style.display = "flex";
+    });
+
+    $("#close").on('click', function(){
+        setTimeout(function(){document.getElementById("instructions").style.display = "none";}, 200)
+
+    });
+});
+
 function showShadow(column){
     if(isRED){
         let item = document.getElementById(shadowMap[0][column]);
@@ -29,12 +42,7 @@ function hideShadow(column){
 
 function initCoin(col){
     dropdiv = document.createElement("div");
-
-    dropdiv.style.width = '80px';
-    dropdiv.style.height = '80px';
-    dropdiv.style.borderRadius = '50%';
-    dropdiv.style.display = 'block';
-    dropdiv.style.margin = '20px 20px';
+    dropdiv.classList.add("dropdiv");
 
     if(isRED){
         dropdiv.style.backgroundColor='#ff6663';
@@ -287,3 +295,5 @@ function dropCoin(col){
         alertMaxLimit();
     }
 }
+
+

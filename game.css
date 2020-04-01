@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');  
-/* font-family: 'Monoton', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');  /* font-family: 'Monoton', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');  /* font-family: 'Roboto', cursive; */
 
 /* red: #ff6663  yellow: #fff656*/
+
+
+
 body {
     background: #133e64;
 }
@@ -78,6 +81,14 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+
+.dropdiv{
+    width : 80px;
+    height : 80px;
+    border-radius : 50%;
+    display : block;
+    margin : 20px 20px;
 }
 
 #ya, #yb, #yc, #yd, #ye, #yf, #yg {
@@ -247,4 +258,277 @@ body {
 #ag{
     border-bottom-right-radius: 5px;
     grid-area: 7/7/span1/span1;
+}
+
+#hearts{
+    display: none;
+}
+
+#instructions{
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin-top: 240px;
+    margin-left: 30px;  
+    /* border: 1px solid #000000; */
+    box-shadow: 0 0 10px #888888;
+    font-family: 'Roboto', sans-serif;
+}
+
+#instructions span{
+    font-size: 14px;
+    color: #133e64;
+}
+#close{
+    width: 50px;
+    height: 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #2c363f;
+    font-weight: 1200;
+    margin-bottom: 8px;
+    background-color: #91c1ff;
+    display: block;
+    cursor: pointer;
+}
+.objective{
+    word-wrap: normal;
+}
+
+@media only screen and (max-width:850px){
+    #instructions{
+        position:fixed;
+        z-index: 3;
+        top: 10%;
+        left: 10%;
+        display: none;
+        justify-content: start ;
+        flex-direction: column;
+        align-items: center;
+        background-color: whitesmoke;
+        width: 250px;
+        height: 190px;
+        /* border: 1px solid #000000; */
+        box-shadow: 0 0 7px grey;
+        /* transition: 0.5s; */
+    }
+
+    #instructions span{
+        font-size: 14px;
+        color: #133e64;
+    }
+
+    #instTitle{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        margin: 5px auto;
+        /* display: none; */
+    }
+
+    #obj1, #obj2{
+        word-wrap:normal;
+        font-size: 12px;
+        margin: 10px 10px auto 10px;
+        /* display: none; */
+    }
+    
+    #close{
+        width: 50px;
+        height: 25px;
+        border-radius: 7px;
+        font-size: 15px;
+        color: #2c363f;
+        font-weight: 1200;
+        margin-bottom: 8px;
+        background-color: #91c1ff;
+        /* display: none; */
+        cursor: pointer;
+    }
+
+    
+    #hearts{
+        display: block;
+        align-self: center;
+        color: lavender;
+        margin-top: 40px;
+    }
+
+
+    #container{
+        flex-direction: column;
+        justify-content: start;
+        width:100%;
+        height: 100%;
+    }
+      
+    /* #container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+     */
+
+    
+    #f{
+        text-orientation: initial;
+        writing-mode: initial;
+        align-self: center;
+        margin: 20px 0px 0px 0px;
+    }
+    #s{
+        text-orientation: initial;
+        writing-mode: initial;
+        margin: 0px auto;
+    }
+     /* #f{
+        align-self: center;
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+        color: #ff6663;
+    }
+    #s{
+        align-self: center;
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+        color: #ffd900;
+    } */
+  
+
+    .titlecf{
+        font-family: 'Monoton' , cursive;
+        font-size: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        margin: 0px auto;
+        width: 100%;
+    }
+    /*.titlecf{
+        font-family: 'Monoton' , cursive;
+        font-size: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        
+    }*/
+
+    #instrdiv{
+        margin-left: 0px;
+       align-self: center;
+       justify-self: center;
+    }
+    /* 
+    
+    #instrdiv{
+        margin-left: 90px;
+    } */
+
+    #instr{
+        align-self: center;
+        text-orientation: upright;
+        justify-self: flex-end;
+        color: whitesmoke;
+        font-size: 16px;
+    }
+    /*
+    #instr{
+        align-self: center;
+        text-orientation: upright;
+        justify-self: flex-end;
+        color: whitesmoke;
+        font-size: 30px;
+    }
+    */
+
+    #board{
+        width: 350px;
+        height: 350px;
+        align-self: center;
+        margin: 30px 10px 0px 10px;
+        /* padding-top: 100%; */
+    }
+
+    /* #board{
+        margin: 30px auto auto;
+        height: 840px;
+        width: 840px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    } */   
+   
+    
+    .bg{
+        width: 50px;
+        height: 50px;
+        background-color: #2e9dff;
+        border-width: 4px;
+        border-style: solid;
+        border-color: #2171b7;
+        position: relative;
+        z-index: 0;
+    }
+
+    /* .bg{
+        width: 120px;
+        height: 120px;
+        background-color: #2e9dff;
+        border-width: 4px;
+        border-style: solid;
+        border-color: #2171b7;
+        position: relative;
+        z-index: 0;
+    } */
+    
+    .coin_shadow_container{
+        width: 50px;
+        height: 50px;
+        background-color: #133e64;
+    }
+
+    /*.coin_shadow_container{
+        width: 120px;
+        height: 120px;
+        background-color: #133e64;
+    }
+    */
+    
+    .coin_shadow{
+        margin: 8.33px;
+        width: 33.33px;
+        height: 33.33px;
+        border-radius: 50%;
+    }
+
+    /*.coin_shadow{
+        margin: 20px 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }*/
+
+    .dropdiv{
+        width : 33.33px;
+        height : 33.33px;
+        border-radius : 50%;
+        display : block;
+        margin : 8.33px 8.33px;
+    }
+    /* .dropDiv{
+        width : 80px;
+        height : 80px;
+        border-radius : 50%;
+        display : block;
+        margin : 20px 20px;
+    } */
+        
+    
 }
