@@ -20,7 +20,16 @@ body {
 
 #instrdiv{
     margin-left: 90px;
+    cursor: pointer;
 }
+
+#instTitle{
+    font-family: 'Monoton', sans-serif;
+    font-size: 18px;
+    margin: 5px auto;
+    /* display: none; */
+}
+
 
 #instr{
     align-self: flex-end;
@@ -267,13 +276,15 @@ body {
 #instructions{
     border-radius: 10px;
     position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 600px;
-    height: 400px;
-    margin-top: 240px;
-    margin-left: 30px;  
+    width: 400px;
+
     /* border: 1px solid #000000; */
     box-shadow: 0 0 10px #888888;
     font-family: 'Roboto', sans-serif;
@@ -283,17 +294,26 @@ body {
     font-size: 14px;
     color: #133e64;
 }
+
+#obj1, #obj2{
+    word-wrap:normal;
+    margin: 10px 10px auto 10px;
+    /* display: none; */
+}
+
 #close{
     width: 50px;
     height: 25px;
     border-radius: 7px;
     font-size: 15px;
     color: #2c363f;
-    font-weight: 1200;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #91c1ff;
     display: block;
     cursor: pointer;
+    align-self: center;
+    justify-self: center;
 }
 .objective{
     word-wrap: normal;
@@ -422,8 +442,9 @@ body {
 
     #instrdiv{
         margin-left: 0px;
-       align-self: center;
-       justify-self: center;
+        align-self: center;
+        justify-self: center;
+        cursor: pointer;
     }
     /* 
     
@@ -437,6 +458,7 @@ body {
         justify-self: flex-end;
         color: whitesmoke;
         font-size: 16px;
+        cursor: pointer !important;
     }
     /*
     #instr{
